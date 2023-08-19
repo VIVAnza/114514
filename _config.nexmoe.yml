@@ -117,9 +117,7 @@ slotFooter: |
 
 # 自定义侧边栏尾部内容
 slotSidebar: |
-  <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号1111</a>
-  <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
-  <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+  <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 # 评论框插槽
 slotComment: | 
