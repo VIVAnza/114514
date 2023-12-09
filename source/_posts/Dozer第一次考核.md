@@ -10,13 +10,13 @@ tags: 做题记录
 
 ### 1.morse_code
 
-![image-20231003131226358](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003131226358.png)
+![image-20231003131226358](Dozer第一次考核/image-20231003131226358.png)
 
 本题可以不用工具，我用到的工具是Audacity
 
 将题目给的文件用工具打开，得到的是这样的图片：
 
-![image-20231003130424024](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003130424024.png)
+![image-20231003130424024](Dozer第一次考核/image-20231003130424024.png)
 
 我们如果听的话，联系题目会发现这是一段摩斯电码：
 
@@ -26,9 +26,9 @@ tags: 做题记录
 
 在网站找到在线摩斯密码翻译器进行翻译
 
-![image-20231003130635315](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003130635315.png)
+![image-20231003130635315](Dozer第一次考核/image-20231003130635315.png)
 
-![image-20231003130824093](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003130824093.png)
+![image-20231003130824093](Dozer第一次考核/image-20231003130824093.png)
 
 套上flag头，就得到了本题的flag：`Dozer{m0r53_15_v3ry_e4sy}`
 
@@ -36,7 +36,7 @@ tags: 做题记录
 
 ### 2.签到
 
-![image-20231003130955448](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003130955448.png)
+![image-20231003130955448](Dozer第一次考核/image-20231003130955448.png)
 
 本题最简单，直接关注公众号发送消息即可得到flag：`Dozer{Hello_CTFer_Welcome_to_Dozer}`。
 
@@ -44,27 +44,27 @@ tags: 做题记录
 
 本题柚子厨狂喜，下载后得到的是一个绫地宁宁的jpg文件，我先以为是图片隐写，用WinHex改了一波长宽后没有用，随后想到了用kali进行binwalk分离，先将图片拖到kali虚拟机桌面，输入binwalk指令：
 
-![image-20231003131721392](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003131721392.png)
+![image-20231003131721392](Dozer第一次考核/image-20231003131721392.png)
 
 可以得到一个文件夹，一路点下去：
 
-![image-20231003131909103](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003131909103.png)
+![image-20231003131909103](Dozer第一次考核/image-20231003131909103.png)
 
 这个密码是所以柚子厨都知道的：`0721`
 
-![image-20231003132017519](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003132017519.png)
+![image-20231003132017519](Dozer第一次考核/image-20231003132017519.png)
 
 然后就得到了flag：`Dozer{W0_caI_Bu_Sh1_y1u_zi_cHu}`。
 
 ### 4.破碎的二维码
 
-![image-20231003132122574](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003132122574.png)
+![image-20231003132122574](Dozer第一次考核/image-20231003132122574.png)
 
 本题下载下来是这样的一堆图片，我比较笨，没想出来怎么做，直接硬拼出来了。
 
-![image-20231003132151817](C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003132151817.png)
+![image-20231003132151817](Dozer第一次考核/image-20231003132151817.png)
 
-<img src="C:\Users\48956\AppData\Roaming\Typora\typora-user-images\image-20231003132255985.png" alt="image-20231003132255985" style="zoom:67%;" />
+<img src="Dozer第一次考核/image-20231003132255985.png" alt="image-20231003132255985" style="zoom:67%;" />
 
 用wps的ppt拼了一个二维码出来，用微信扫一下就得到了flag：
 
@@ -814,8 +814,16 @@ flag为：`Dozer{fb271bcadea3491c8fe8b942491ae672}`。
 
 ![image-20231014143941618](Dozer第一次考核/image-20231014143941618.png)
 
-分析代码得知，我们需要用get传参传入id和login，同时需要通过md5强比较，上网搜到了能够通过md5强比较的值：`%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2`，那我们用get传参交上去就可以pass第一层，即提交`/?id=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2
+分析代码得知，我们需要用get传参传入id和login，同时需要通过md5强比较，上网搜到了能够通过md5强比较的值：
+
+```
+%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2
+```
+那我们用get传参交上去就可以pass第一层，即提交：
+
+```/?id=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%00%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%55%5d%83%60%fb%5f%07%fe%a2
 &login=%4d%c9%68%ff%0e%e3%5c%20%95%72%d4%77%7b%72%15%87%d3%6f%a7%b2%1b%dc%56%b7%4a%3d%c0%78%3e%7b%95%18%af%bf%a2%02%a8%28%4b%f3%6e%8e%4b%55%b3%5f%42%75%93%d8%49%67%6d%a0%d1%d5%5d%83%60%fb%5f%07%fe%a2`
+```
 
 ![image-20231014144542437](Dozer第一次考核/image-20231014144542437.png)
 
