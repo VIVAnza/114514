@@ -1,3 +1,9 @@
+---
+title: Dozer第一次考核
+date: 2023-10-28 20:00:00
+cover: /illust_99248298_20220722_142026.jpg
+tags: 做题记录
+---
 # Dozer第一次考核
 
 ## MISC
@@ -35,8 +41,6 @@
 本题最简单，直接关注公众号发送消息即可得到flag：`Dozer{Hello_CTFer_Welcome_to_Dozer}`。
 
 ### 3.开心的picture
-
- if(a) {    if(b) {        xxx    }else{        xxxx    }}else{    xxxxx}c
 
 本题柚子厨狂喜，下载后得到的是一个绫地宁宁的jpg文件，我先以为是图片隐写，用WinHex改了一波长宽后没有用，随后想到了用kali进行binwalk分离，先将图片拖到kali虚拟机桌面，输入binwalk指令：
 
