@@ -1,3 +1,9 @@
+---
+title: BUU MISC第一页
+date: 2023-11-4 20:00:00
+cover: /illust_99248298_20220722_142026.jpg
+tags: 做题记录
+---
 # BUU MISC第一页
 
 ### 1.签到
